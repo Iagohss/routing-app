@@ -1,0 +1,6 @@
+<div>
+  <h1> Parent Component </h1>
+  <input type="tetx" [(ngModel)]="text">
+  <p> child text is: {{ childText }}</p>
+</div>
+<app-child [parentText]="text" (sendTextEmitter)="receiveTextChild($event)"></app-child>
